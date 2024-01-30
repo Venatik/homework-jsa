@@ -19,7 +19,7 @@ function getStats(num) {
 getStats(-426);
 
 
-// Exercise 2
+// Exercise 2 
 
 let textSizeInput = document.getElementById("textSize");
 let colorInput = document.getElementById("color");
