@@ -1,0 +1,144 @@
+body {
+  background: rgb(4, 3, 23);
+  background: linear-gradient(
+    90deg,
+    rgba(4, 3, 23, 1) 0%,
+    rgba(9, 67, 121, 1) 35%,
+    rgba(0, 131, 255, 1) 100%
+  );
+  font-family: Arial;
+}
+
+#chooseGame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#chooseHangman,
+#chooseCalculator {
+  height: 200px;
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+h2 {
+  color: white;
+  font-weight: bold;
+}
+
+#hangmanLink,
+#calcLink {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+#aboutText {
+  color: white;
+  text-align: center;
+  margin-top: 100px;
+}
+
+td > button {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  border: 3px solid black;
+  background-color: white;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+}
+
+#resultCalc {
+  width: 200px;
+  height: 40px;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+#tableDiv {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  border: 2px solid white;
+  border-radius: 10px;
+  max-width: 90%;
+}
+
+#alphabetButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+}
+
+#alphabetButtons > button {
+  margin: 3px;
+  border: 3px solid black;
+  background-color: blue;
+  color: white;
+  width: 60px;
+  height: 60px;
+}
+
+#hangmanButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#btnHint,
+#btnNewGame {
+  margin: 0 auto;
+  width: 150px;
+  height: 100px;
+  border-radius: 5px;
+  border: 2px solid black;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
+}
+
+#btnHint {
+  margin-right: 10px;
+}
+
+#btnNewGame {
+  margin-left: 10px;
+}
+
+#hangmanText,
+#hangmanMain {
+  color: white;
+  font-family: Arial;
+  text-align: center;
+}
+
+#winLose {
+  font-weight: bolder;
+}
+
+#covece {
+  border: 2px dotted black;
+}
+
+#chosenCategory,
+#lives,
+#hangmanHint {
+  font-size: 20px;
+}

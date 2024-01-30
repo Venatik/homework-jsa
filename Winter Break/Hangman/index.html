@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand">Winter Break Project</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hangman</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../Calculator/index.html">Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../about.html">About</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="hangmanText">
+        <h1>JavaScript Hangman Game</h1>
+        <p>Use the letters below to guess the word or click Hint to get a clue!</p>
+    </div>
+
+    <div id="hangmanDiv">
+        <div id="alphabetButtons">
+            <button class="btnLetter">A</button>
+            <button class="btnLetter">B</button>
+            <button class="btnLetter">C</button>
+            <button class="btnLetter">D</button>
+            <button class="btnLetter">E</button>
+            <button class="btnLetter">F</button>
+            <button class="btnLetter">G</button>
+            <button class="btnLetter">H</button>
+            <button class="btnLetter">I</button>
+            <button class="btnLetter">J</button>
+            <button class="btnLetter">K</button>
+            <button class="btnLetter">L</button>
+            <button class="btnLetter">M</button>
+            <button class="btnLetter">N</button>
+            <button class="btnLetter">O</button>
+            <button class="btnLetter">P</button>
+            <button class="btnLetter">Q</button>
+            <button class="btnLetter">R</button>
+            <button class="btnLetter">S</button>
+            <button class="btnLetter">T</button>
+            <button class="btnLetter">U</button>
+            <button class="btnLetter">V</button>
+            <button class="btnLetter">W</button>
+            <button class="btnLetter">X</button>
+            <button class="btnLetter">Y</button>
+            <button class="btnLetter">Z</button>
+        </div>
+    </div>
+
+    <div id="hangmanMain">
+        <p id="chosenCategory">The chosen category is </p>
+        <br>
+        <p id="lives">Remaining Lives: </p>
+        <br>
+        <p id="hangmanHint">Hint</p>
+        <br>
+        <canvas id="covece" width="200" height="200"></canvas>
+        <p id="winLose"></p>
+    </div>
+    <div id="hangmanButtons">
+        <button id="btnHint">Hint</button>
+        <button id="btnNewGame">New Game</button>
+    </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
