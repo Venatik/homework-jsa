@@ -57,7 +57,7 @@ function femaleOverFive(studentData) {
     container.appendChild(paragraph);
     paragraph.innerHTML = femaleOverFive.join("<br>");
 
-    // return femaleOverFive;
+    return femaleOverFive;
 }
 
 function maleOverEighteen(studentData) {
@@ -70,6 +70,8 @@ function maleOverEighteen(studentData) {
     let paragraph = document.createElement("p");
     container.appendChild(paragraph);
     paragraph.innerHTML = maleOver18.join("<br>");
+
+    return maleOver18;
 }
 
 function femaleOverTwentyFourAverage(studentData) {
@@ -82,16 +84,20 @@ function femaleOverTwentyFourAverage(studentData) {
     let paragraph = document.createElement("p");
     container.appendChild(paragraph);
     paragraph.innerHTML = `The average of all female students over the age of 24 is: ${femaleOver24Average.toFixed(2)}`;
+
+    return femaleOver24;
 }
 
 function maleB(studentData) {
     let maleB = studentData.filter(student => student.gender === "Male" && student.firstName.startsWith("B") && student.averageGrade > 2);
     let maleBString = maleB.map(student => `${student.firstName} ${student.lastName}: ${student.averageGrade}`).join("<br>");
 
-    console.log(maleB);
+    // console.log(maleB);
 
     let container = document.getElementById("maleStartingB");
     let paragraph = document.createElement("p");
     container.appendChild(paragraph);
     paragraph.innerHTML = `Male students whose name starts with B and have an average grade of 2:<br>${maleBString}`;
+
+    return maleB;
 }
