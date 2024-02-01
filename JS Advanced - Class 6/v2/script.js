@@ -1,36 +1,5 @@
-/* There is a JSON file with students. Make a call to the file and get the following data from it:
-
-    All students with an average grade higher than 3
-    All female student names with an average grade of 5
-    All male student full names who live in Skopje and are over 18 years old
-    The average grades of all female students over the age of 24
-    All male students with a name starting with B and average grade over 2
-
-Use higher order functions to find the answers. */
-
 let btn = document.getElementById("button");
 let studentData = null;
-
-// btn.addEventListener("click", function () {
-//     fetch("https://raw.githubusercontent.com/sedc-codecademy/mkwd12-04-ajs/main/G7/Class06/homework/students.json")
-//         .then(function (response) {
-//             console.log(response);
-//             return response.json();
-//         })
-//         .then(function (students) {
-//             console.log(students);
-//             studentData = students;
-
-//             higherThanThree(studentData);
-//             femaleOverFive(studentData);
-//             maleOverEighteen(studentData);
-//             femaleOverTwentyFourAverage(studentData);
-//             maleB(studentData);
-//         })
-//         .catch(function (error) {
-//             console.log(`The request has failed. Please try again. ${error}`);
-//         })
-// });
 
 document.getElementById("button1").addEventListener("click", function () {
     fetch("https://raw.githubusercontent.com/sedc-codecademy/mkwd12-04-ajs/main/G7/Class06/homework/students.json")
