@@ -1,7 +1,7 @@
 let btn = document.getElementById("button");
 let studentData = null;
 
-document.getElementById("button1").addEventListener("click", function () {
+function fetchData(action) {
     fetch("https://raw.githubusercontent.com/sedc-codecademy/mkwd12-04-ajs/main/G7/Class06/homework/students.json")
         .then(function (response) {
             console.log(response);
@@ -10,76 +10,130 @@ document.getElementById("button1").addEventListener("click", function () {
         .then(function (students) {
             console.log(students);
 
-            higherThanThree(students);
+            switch (action) {
+                case "higherThanThree":
+                    higherThanThree(students);
+                    break;
+                case "femaleOverFive":
+                    femaleOverFive(students);
+                    break;
+                case "maleOverEighteen":
+                    maleOverEighteen(students);
+                    break;
+                case "femaleOverTwentyFourAverage":
+                    femaleOverTwentyFourAverage(students);
+                    break;
+                case "maleB":
+                    maleB(students);
+                    break;
+                default:
+                    console.log("Invalid action.");
+            }
         })
         .catch(function (error) {
             console.log(`The request has failed. Please try again. ${error}`);
-        })
+        });
+}
+
+document.getElementById("button1").addEventListener("click", function () {
+    fetchData("higherThanThree");
 });
 
 document.getElementById("button2").addEventListener("click", function () {
-    fetch("https://raw.githubusercontent.com/sedc-codecademy/mkwd12-04-ajs/main/G7/Class06/homework/students.json")
-        .then(function (response) {
-            console.log(response);
-            return response.json();
-        })
-        .then(function (students) {
-            console.log(students);
-
-            femaleOverFive(students);
-        })
-        .catch(function (error) {
-            console.log(`The request has failed. Please try again. ${error}`);
-        })
+    fetchData("femaleOverFive");
 });
 
 document.getElementById("button3").addEventListener("click", function () {
-    fetch("https://raw.githubusercontent.com/sedc-codecademy/mkwd12-04-ajs/main/G7/Class06/homework/students.json")
-        .then(function (response) {
-            console.log(response);
-            return response.json();
-        })
-        .then(function (students) {
-            console.log(students);
-
-            maleOverEighteen(students);
-        })
-        .catch(function (error) {
-            console.log(`The request has failed. Please try again. ${error}`);
-        })
+    fetchData("maleOverEighteen");
 });
 
 document.getElementById("button4").addEventListener("click", function () {
-    fetch("https://raw.githubusercontent.com/sedc-codecademy/mkwd12-04-ajs/main/G7/Class06/homework/students.json")
-        .then(function (response) {
-            console.log(response);
-            return response.json();
-        })
-        .then(function (students) {
-            console.log(students);
-
-            femaleOverTwentyFourAverage(students);
-        })
-        .catch(function (error) {
-            console.log(`The request has failed. Please try again. ${error}`);
-        })
+    fetchData("femaleOverTwentyFourAverage");
 });
 
 document.getElementById("button5").addEventListener("click", function () {
-    fetch("https://raw.githubusercontent.com/sedc-codecademy/mkwd12-04-ajs/main/G7/Class06/homework/students.json")
-        .then(function (response) {
-            console.log(response);
-            return response.json();
-        })
-        .then(function (students) {
-            console.log(students);
-
-            maleB(students);
-        })
-        .catch(function (error) {
-            console.log(`The request has failed. Please try again. ${error}`);
-        })
+    fetchData("maleB");
 });
+
+// document.getElementById("button1").addEventListener("click", function () {
+//     fetch("https://raw.githubusercontent.com/sedc-codecademy/mkwd12-04-ajs/main/G7/Class06/homework/students.json")
+//         .then(function (response) {
+//             console.log(response);
+//             return response.json();
+//         })
+//         .then(function (students) {
+//             console.log(students);
+
+//             higherThanThree(students);
+//         })
+//         .catch(function (error) {
+//             console.log(`The request has failed. Please try again. ${error}`);
+//         })
+// });
+
+// document.getElementById("button2").addEventListener("click", function () {
+//     fetch("https://raw.githubusercontent.com/sedc-codecademy/mkwd12-04-ajs/main/G7/Class06/homework/students.json")
+//         .then(function (response) {
+//             console.log(response);
+//             return response.json();
+//         })
+//         .then(function (students) {
+//             console.log(students);
+
+//             femaleOverFive(students);
+//         })
+//         .catch(function (error) {
+//             console.log(`The request has failed. Please try again. ${error}`);
+//         })
+// });
+
+// document.getElementById("button3").addEventListener("click", function () {
+//     fetch("https://raw.githubusercontent.com/sedc-codecademy/mkwd12-04-ajs/main/G7/Class06/homework/students.json")
+//         .then(function (response) {
+//             console.log(response);
+//             return response.json();
+//         })
+//         .then(function (students) {
+//             console.log(students);
+
+//             maleOverEighteen(students);
+//         })
+//         .catch(function (error) {
+//             console.log(`The request has failed. Please try again. ${error}`);
+//         })
+// });
+
+// document.getElementById("button4").addEventListener("click", function () {
+//     fetch("https://raw.githubusercontent.com/sedc-codecademy/mkwd12-04-ajs/main/G7/Class06/homework/students.json")
+//         .then(function (response) {
+//             console.log(response);
+//             return response.json();
+//         })
+//         .then(function (students) {
+//             console.log(students);
+
+//             femaleOverTwentyFourAverage(students);
+//         })
+//         .catch(function (error) {
+//             console.log(`The request has failed. Please try again. ${error}`);
+//         })
+// });
+
+// document.getElementById("button5").addEventListener("click", function () {
+//     fetch("https://raw.githubusercontent.com/sedc-codecademy/mkwd12-04-ajs/main/G7/Class06/homework/students.json")
+//         .then(function (response) {
+//             console.log(response);
+//             return response.json();
+//         })
+//         .then(function (students) {
+//             console.log(students);
+
+//             maleB(students);
+//         })
+//         .catch(function (error) {
+//             console.log(`The request has failed. Please try again. ${error}`);
+//         })
+// });
 
 function higherThanThree(studentData) {
     let higherThanThree = studentData.filter(student => student.averageGrade > 3);
