@@ -37,5 +37,3 @@ async function getBorderingCountries(code) {
 
 
 getBorderingCountries("MKD");
-// getBorderingCountries("SRB");
-// getBorderingCountries("ALB");
